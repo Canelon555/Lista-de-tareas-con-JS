@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es" class="tema1">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TodoApp</title>
+    <link rel="stylesheet" href="index.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+    integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+    crossorigin="anonymous">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+<main id="main-container">
+  <h1 id="title">TODO APP</h1>
+  <h2 id="sub-title">Lista de Tareas</h2>
+<form id="formulario">
+  <div id="form-container">
+    <input type="text" placeholder="Crea una tarea..." id="new-task">
+    <button id="add-task" type="submit" disabled><i class="fas fa-plus"></i></button>
+  </div> 
+</form>
+    <div id="form-list">
+      <ul id="lista"> 
+        
+        <li class="tareas">
+          <button class="delete" type="reset"><i class="fa-solid fas fa-trash"></i></button>
+          <button class="check"><i class="fas fa-check"></i></button>      
+      </ul>
+    </div>
+    <div id="counters">
+      <div id="total-tasks">
+        <p class="all-counters">Total: <span id="total-count">0</Span></p>
+      </div>
+      <div t id="completed-tasks">
+        <p class="all-counters">Completas: <span id="completed-count">0</span></p>
+      </div>
+      <div id="incompleted-tasks">
+        <p class="all-counters">Incompletas: <span id="incompleted-count">0</span></p>
+      </div>
+      
+    </div>
+</main>
+<script src="dom.js"></script>
+</body>
+</html>

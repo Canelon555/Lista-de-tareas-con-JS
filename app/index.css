@@ -1,0 +1,335 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+body {
+  color: white;
+  font-family: 'Times New Roman', Times, serif;
+  min-height: 90;
+}
+
+.tema1{
+  background-repeat: repeat-x;
+  background-size: cover;
+  background: linear-gradient(-45deg, #4B0082, #800080, #483D8B, #462f4f);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+h1 {
+  font-size: 30px;
+  text-align: center;
+  padding-top: 2rem;
+  margin: 1rem;
+}
+
+h2 {
+  font-size: 20px;
+  text-align: center;
+  margin: 1rem;
+}
+
+#main-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem;
+  max-width: 160rem; 
+}
+
+#formulario {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 18px;
+  border: none;
+  border-radius: 0.5rem;
+  background: rgba( 255, 255, 255, 0.15 );
+  backdrop-filter: blur(20.0px);
+  -webkit-backdrop-filter: blur( 20.0px );
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  color: white;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+#form-container {
+  width: 100%;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+#new-task{
+    border-radius: 0.5rem;
+    border: none;
+    width: 100%;
+    height: 2rem;
+}
+
+#add-task {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba( 255, 255, 255, 0.15 );
+  backdrop-filter: blur( 20.0px );
+  -webkit-backdrop-filter: blur( 20.0px );
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  border-radius: 0.5rem;
+  color: white;
+  width: 2rem;
+  height: 2rem;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.175s ease-in-out;
+  padding: 0.5rem;
+}
+
+#add-task:disabled{
+  color: rgba(211, 211, 211, 0.164);
+  transition: none;
+}
+
+#add-task:active{
+  color: white;
+}
+
+#lista{
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  width: 100%;
+  padding-left: 0;
+  overflow: auto;
+  scroll-behavior: smooth;
+  height: 100%;
+  word-wrap: break-word;
+}
+
+#lista::-webkit-scrollbar-thumb {
+  background-color: pink;
+  border-radius: 20px;
+  border: 3px solid violet;
+  transition: all 0.175s ease-in-out;
+}
+
+#lista::-webkit-slider-thumb:hover{
+  background-color: #374151;
+}
+
+#lista::-webkit-scrollbar-track {
+  background: rgba( 255, 255, 255, 0.15 );
+  backdrop-filter: blur( 20.0px );
+  -webkit-backdrop-filter: blur( 20.0px );
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  border-left: none;;
+  border-radius: 20px;
+}
+
+#form-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1rem;
+  width: 100%; 
+  text-align: left;
+  font-size: 16px;
+}
+
+.tareas {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 18px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 1s ease;
+  background: rgba( 255, 255, 255, 0.15 );
+  backdrop-filter: blur( 20.0px );
+  -webkit-backdrop-filter: blur( 20.0px );
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  border-radius: 15px;
+}
+
+.check {
+  background-color: transparent;
+  width: 2rem;
+  border-style: none;
+  color: rgb(6, 212, 6);
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.175s ease-in-out;
+}
+
+.check:active{
+  background-color: rgb(6, 212, 6);
+  color: #797979;
+  font-size: 20px;
+  border-radius: 0.5rem;
+}
+
+.check-done{
+  background-color: transparent;
+  width: 2rem;
+  border-style: none;
+  color: rgb(6, 212, 6);
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.175s ease-in-out;
+}
+
+.check-done:active{
+  background-color: green;
+  color: #797979;
+  font-size: 20px;
+}
+
+.text-task{
+  height: auto;
+  width: 100%;
+  font-size: 16px;
+  
+}    
+
+.text-done{
+  text-decoration: line-through;
+  height: auto;
+  width: 100%;
+  font-size: 16px;
+}
+
+.done-task{
+  text-decoration: line-through;
+}
+
+.delete{
+  background-color: transparent;
+  width: 2rem;
+  color: red;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.175s ease-in-out;
+  border-style: none;
+}
+
+.delete:active{
+  background-color: red;
+  color: #797979 ;
+  font-size: 20px;
+  border-radius: 0.5rem;
+}
+
+#counters {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1rem;
+}
+
+#total-tasks {
+  color: white;
+  border-radius: 0.5rem;
+  margin: 0.5rem;
+  padding: 0.2rem;
+  background: rgba( 255, 255, 255, 0.15 );
+  backdrop-filter: blur( 20.0px );
+  -webkit-backdrop-filter: blur( 20.0px );
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  border-left: none;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 16px;
+}
+
+#completed-tasks {
+  color: white;
+  border-radius: 0.5rem;
+  margin: 0.5rem;
+  padding: 0.2rem;
+  background: rgba( 255, 255, 255, 0.15 );
+  backdrop-filter: blur( 20.0px );
+  -webkit-backdrop-filter: blur( 20.0px );
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  border-left: none;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 16px;
+}
+
+#incompleted-tasks {
+  color: white;
+  border-radius: 0.5rem;
+  margin: 0.5rem;
+  padding: 0.2rem;
+  background: rgba( 255, 255, 255, 0.15 );
+  backdrop-filter: blur( 20.0px );
+  -webkit-backdrop-filter: blur( 20.0px );
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  border-left: none;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 16px;
+}
+
+@media (min-width: 768px){
+  #title {
+     
+      font-size: 30px;
+      display: flex;
+      justify-content: center;
+      
+      }
+  #formulario{
+      width: 100%;
+      
+  }
+  
+  .all-counters{
+      font-size: 16px;
+  }
+  }
+  @media (min-width: 1024px){
+      #title {
+          font-size: 30px;
+          display: flex;
+          justify-content: center;
+          
+          }
+      #formulario{
+          width: 70%;
+          
+      }
+  
+      #lista{
+          height: 70%;
+      }
+  
+      .all-counters{
+          font-size: 16px;
+      }
+      
+      
+  }
+  
+  @media (min-width: 2560px){
+      #title {
+      font-size: 60px;
+      display: flex;
+      justify-content: center;
+      
+      }
+  
+  #main-container{
+      display: flex;
+      align-items: center;
+      padding-top: 10rem;
+  }    
+  #formulario{
+      width: 70%;
+      
+  }
+  
+  #lista{
+      height: 70%;
+  } 
+  }
